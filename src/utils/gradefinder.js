@@ -18,7 +18,10 @@ const gradefinder = (coursedetails, callback) => {
             var index = 0;
 
             for (var i = 0; i < countKey; i++){
-                if (body[i].average_past_5_yrs > parseInt(coursedetails.percentage) &&
+                if (body[i].average_past_5_yrs > parseInt(coursedetails.percentage) && coursedetails.year === 'ALL'){
+                    newbody[index] = body[i];
+                    index++;
+                } else if (body[i].average_past_5_yrs > parseInt(coursedetails.percentage) &&
                     body[i].course >= (coursedetails.year * 100) && body[i].course <= ((coursedetails.year * 100) + 100)) {
                     newbody[index] = body[i];
                     index++;
