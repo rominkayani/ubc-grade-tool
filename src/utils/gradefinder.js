@@ -31,8 +31,12 @@ const gradefinder = (coursedetails, callback) => {
             var str = ''
 
             for (var i = 0; i < newbody.length; i++){
-                str = str + 'The average for ' + newbody[i].subject + ' ' + newbody[i].course + ' is ' + newbody[i].average_past_5_yrs + '\n'
+                // str = str + '| ' + newbody[i].subject + ' ' + newbody[i].course + ' ' + newbody[i].average_past_5_yrs.substring(0, 4) + ' | ' + '\n'
+                str = str + newbody[i].subject + ' ' + newbody[i].course + ' - ' + Math.round(newbody[i].average_past_5_yrs * 100) / 100 + '\n'
+
             }
+
+            
 
             console.log(str)
 
