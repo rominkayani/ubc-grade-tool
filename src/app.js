@@ -48,27 +48,21 @@ app.get('/weather', (req, res) => {
         })
     }
 
-    if (!req.query.year) {
-        return res.send({
-            error: 'Please provide a year!'
-        })
-    }
-
     if (!req.query.course) {
         return res.send({
             error: 'Please provide a course!'
         })
     }
 
-    if (!req.query.coursenumber) {
+    if (!req.query.year) {
         return res.send({
-            error: 'Please provide a Course Number!'
+            error: 'Please provide a year!'
         })
     }
 
-    if (!req.query.coursesection) {
+    if (!req.query.percentage) {
         return res.send({
-            error: 'Please provide a Course Section!'
+            error: 'Please provide a minimum percentage!'
         })
     }
 
