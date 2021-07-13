@@ -1,8 +1,7 @@
 const request = require('request')
 
 const coursefinder = () => {
-    // const url = 'https://ubcgrades.com/api/v1/grades/UBCV/2018W/MATH/100/101'
-    const url = 'https://ubcgrades.com/api/v2/course-statistics/UBCV/ENGL'
+    const url = 'https://ubcgrades.com/api/v2/subjects/UBCV'
     // + coursedetails.location + '/' + coursedetails.year + '/'
     // + coursedetails.course + '/' + coursedetails.coursenumber + '/'
     // + coursedetails.coursesection
@@ -11,17 +10,14 @@ const coursefinder = () => {
         var countKey = Object.keys(body).length
         console.log(countKey)
 
-        var newbody = new Array();
-        var index = 0;
+
+        var str = ''
 
         for (var i = 0; i < countKey; i++){
-            if (body[i].average_past_5_yrs > 80) {
-                newbody[index] = body[i];
-                index++;
-            }
+            str = str + '<option value=' + '"' + body[i].subject +  '"' + '></option>' + '\n'
         }
 
-        console.log(newbody)
+        console.log(str)
     })
 }
 
