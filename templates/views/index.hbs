@@ -15,9 +15,22 @@
         <p>Use this site to find UBC Grades!</p>
 
         <form>
-            <input name = "Location" placeholder="Campus (UBCV or UBCO)">
+            <input list = "Location" name = "Location" placeholder="Campus (UBCV or UBCO)">
+            <datalist id="Location">
+                <option value="UBCV">
+                <option value="UBCO">
+            </datalist>
+
             <input name = "Course" placeholder="Course (MATH)">
-            <input name = "Year" placeholder="Year (1 or 2 or ALL)">
+
+            <input list = "Year" name = "Year" placeholder="Year (1 or 2 or ALL)">
+            <datalist id="Year">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="ALL">
+            </datalist>
             <input name = "Percentage" placeholder="Min.Percentage (80 or 65)">
             <button>Search</button>
         </form>

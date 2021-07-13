@@ -39,6 +39,9 @@ const gradefinder = (coursedetails, callback) => {
 
             }
 
+            if (str === ""){
+                str = "No Courses Fit This Criteria"
+            }
 
             callback(undefined, str)
         }
