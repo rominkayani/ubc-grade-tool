@@ -10,7 +10,7 @@ const gradefinder = (coursedetails, callback) => {
         if (error) {
             callback('Unable to connect to UBC grade system!', undefined)
         } else if (body.error) {
-            callback('Unable to find course', undefined)
+            callback('Unable to find courses that meet criteria', undefined)
         } else {
             var countKey = Object.keys(body).length
     

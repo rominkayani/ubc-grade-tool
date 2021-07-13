@@ -28,14 +28,14 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Me',
+        title: 'FAQ',
         name: 'Romin Kayani'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'This is some helpful text.',
+        helpText: 'If you have any questions or concerns please feel free to reach out to me at (rominkayani123@gmail.com)',
         title: 'Help',
         name: 'Romin Kayani'
     })

@@ -27,7 +27,11 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 messageOne.textContent = data.error
             } else {
-                messageOne.textContent = data.location
+                if (year === "ALL"){
+                    messageOne.textContent = course + ' ' + "Course Averages above " + percentage + "%, at " + location
+                } else {
+                    messageOne.textContent = course + ' (Year ' + year + ') ' + "Course Averages above " + percentage + "%, at " + location
+                }
                 messageTwo.textContent = data.forecast
             }
         })
