@@ -1,7 +1,5 @@
 // This code was adapted from https://www.guru99.com/quicksort-in-javascript.html
 
-// var items = [5,3,7,6,2,9];
-
 function swap(items, leftIndex, rightIndex){
     var temp = items[leftIndex];
     items[leftIndex] = items[rightIndex];
@@ -40,8 +38,5 @@ function quickSort(items, left, right) {
     }
     return items;
 }
-
-// var sortedArray = quickSort(items, 0, items.length - 1);
-// console.log(sortedArray); //prints [2,3,5,6,7,9]
 
 module.exports = quickSort
