@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.error
             } else {
                 if (year === "ALL"){
-                    messageOne.textContent = course + ' ' + "Course Averages above " + percentage + "%, at " + location
+                    messageOne.textContent = course + ' ' + "Course Averages above " + percentage + "% at " + location
                 } else {
                     messageOne.textContent = course + ' (Year ' + year + ') ' + "Course Averages above " + percentage + "%, at " + location
                 }
