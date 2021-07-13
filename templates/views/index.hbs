@@ -4,16 +4,16 @@
 
 <head>
     <title>Main</title>
-    <link rel="icon" href="/img/weather.png">
+    {{!-- <link rel="icon" href="/img/weather.png"> --}}
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
+        <p style="font-size:15px">Use the search below to find courses organized by their average over the past five years  </p>
 
-        <p>Use this site to find UBC Grades!</p>
-
+        
         <form>
             <input list="Location" name="Location" placeholder="Campus">
             <datalist id="Location">
@@ -259,7 +259,7 @@
             
                 
 
-            <input list="Year" name="Year" placeholder="Year">
+            <input list="Year" name="Year" placeholder="Year Level">
             <datalist id="Year">
                 <option value="1">
                 <option value="2">
