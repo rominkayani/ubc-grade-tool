@@ -1,4 +1,5 @@
 const request = require('request')
+const quickSort = require('./quicksort')
 
 const gradefinder = (coursedetails, callback) => {
     // const url = 'https://ubcgrades.com/api/v1/grades/UBCV/2018W/MATH/100/101'
@@ -27,22 +28,25 @@ const gradefinder = (coursedetails, callback) => {
                     index++;
                 }
             }
+
+            var sortednewbody = quickSort(newbody, 0, newbody.length - 1).reverse()
             
             var str = ''
 
-            for (var i = 0; i < newbody.length; i++){
+            for (var i = 0; i < sortednewbody.length; i++){
                 // str = str + '| ' + newbody[i].subject + ' ' + newbody[i].course + ' ' + newbody[i].average_past_5_yrs.substring(0, 4) + ' | ' + '\n'
-                str = str + newbody[i].subject + ' ' + newbody[i].course + ' - ' + Math.round(newbody[i].average_past_5_yrs * 100) / 100 + '\n'
+                str = str + sortednewbody[i].subject + ' ' + sortednewbody[i].course + ' - ' + Math.round(sortednewbody[i].average_past_5_yrs * 100) / 100 + '\n'
 
             }
 
             
 
-            console.log(str)
 
             callback(undefined, str)
         }
     })
 }
+
+
 
 module.exports = gradefinder
