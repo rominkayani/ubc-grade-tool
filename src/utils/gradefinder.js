@@ -29,6 +29,7 @@ const gradefinder = (coursedetails, callback) => {
             }
 
             var sortednewbody = quickSort(newbody, 0, newbody.length - 1).reverse()
+            // var sortednewbody = newbody
             
             var str = ''
 

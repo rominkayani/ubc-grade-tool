@@ -1,10 +1,11 @@
 // This code was adapted from https://www.guru99.com/quicksort-in-javascript.html
 
-var items = [5,3,7,6,2,9];
+// var items = [5,3,7,6,2,9];
+
 function swap(items, leftIndex, rightIndex){
-    var temp = items[leftIndex].average_past_5_yrs;
-    items[leftIndex].average_past_5_yrs = items[rightIndex].average_past_5_yrs;
-    items[rightIndex].average_past_5_yrs = temp;
+    var temp = items[leftIndex];
+    items[leftIndex] = items[rightIndex];
+    items[rightIndex] = temp;
 }
 function partition(items, left, right) {
     var pivot   = items[Math.floor((right + left) / 2)].average_past_5_yrs, //middle element
@@ -39,7 +40,6 @@ function quickSort(items, left, right) {
     }
     return items;
 }
-
 
 // var sortedArray = quickSort(items, 0, items.length - 1);
 // console.log(sortedArray); //prints [2,3,5,6,7,9]
