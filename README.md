@@ -9,5 +9,5 @@ All courses that meet the minimum average and other criteria mentioned above wil
 * I learned how to use handlebars to create a multi-selection menu of relevant search criteria
 
 # Demo
-[Launch] (https://romin-ubc-grade-tool.herokuapp.com)
+[Launch](https://romin-ubc-grade-tool.herokuapp.com)
 
